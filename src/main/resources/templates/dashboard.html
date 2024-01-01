@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Two Factor Authentication</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin-top: 70px; /* Adjust margin for the fixed navbar */
+        }
+
+        .navbar {
+            background-color: cadetblue;
+            border: none;
+            border-radius: 0;
+        }
+
+        .navbar h1 {
+            color: white;
+            margin: 0;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .navbar .user-info {
+            color: white;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        .navbar .logout-btn {
+            margin-top: 5px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .project-details {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .project-details h2 {
+            color: cadetblue;
+        }
+
+        .call-to-action {
+            margin-top: 20px;
+        }
+
+        .call-to-action a {
+            display: block;
+            margin-bottom: 10px;
+            color: cadetblue;
+            text-decoration: none;
+        }
+
+        .call-to-action a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="navbar-right">
+                <div class="user-info">
+                    Hi, Welcome <span th:text ="*{userDetails}"></span>
+                </div>
+                <a th:href="@{/logout}" class="logout-btn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="project-details">
+            <h2>Two Factor Authentication App</h2>
+            <p>Technologies Used: Thymeleaf, Spring Boot, JavaMailSender, etc.</p>
+        </div>
+
+        <div class="call-to-action">
+            <h2>Contact Information</h2>
+            <a href="https://www.linkedin.com/in/deepak-kakarla/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/whoisdeepak" target="_blank">GitHub</a>
+        </div>
+    </div>
+
+</body>
+</html>
